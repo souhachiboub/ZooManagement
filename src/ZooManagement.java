@@ -19,10 +19,10 @@ public class ZooManagement {
         zooname.close();
 
 
-//       Deuxième  Prosit
+     //       Deuxième  Prosit
         Animal lion=new Animal("Lions","Simba",20,true);
         Zoo myZoo=new Zoo("Singapore Zoo","Singapore",25);
-        myZoo.addAnimal(lion, 0);
+        myZoo.addAnimal(lion);
         myZoo.displayZoo();
         System.out.println(myZoo);
         System.out.println(myZoo.toString());
@@ -31,6 +31,21 @@ public class ZooManagement {
         le compilateur dans ce cas fait l'appel implicite de cette méthode
          */
         System.out.println(lion.toString());
+
+        /* Prosit 3 */
+       // Affichage des informations du zoo et des animaux
+        myZoo.displayAnimalsInfo();
+
+        // Test de la méthode de recherche
+        int foundIndex = myZoo.searchAnimal(lion);
+        System.out.println("Search result : Index " + foundIndex);
+
+
+        // Création d'un nouvel animal
+        Animal dauphine= new Animal("Delphinidae", "Dauphin", 12, true);
+        int identicalLionIndex = myZoo.searchAnimal(dauphine);
+        System.out.println("Search result ': Index " + identicalLionIndex);
+
 
     }
 

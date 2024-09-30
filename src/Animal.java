@@ -4,6 +4,9 @@ public class Animal {
     int age;
     boolean isMammal;
 
+    public Animal() {
+    }
+
     public Animal(String familly, String name, int age, boolean isMammal) {
         this.familly = familly;
         this.name = name;
@@ -15,4 +18,6 @@ public class Animal {
     public String toString() {
         return "Animal's family:" + familly +"Animal's name:"+name+"Animal's Age :"+age;
     }
+
+
 }
